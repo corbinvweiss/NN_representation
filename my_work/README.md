@@ -3,3 +3,9 @@ Recall that this MLP takes an image of a handwritten digit, such as an image of 
 
 To understand the internal representation of reality in a Neural Network I would like to average the classification vectors across all samples of each input class and look at the classification distributions.
 
+# Analysis
+The mean certainties of each classification were plotted for 1000 samples of each class. The results are consistent with thinking of classification certainty as a measure of distance, where the distance from class $a$ to class $b$ is inversely proportional to the certainty of classifying $a$ as an image of $b$. In particular, distances are nearly symmetric, and the distance from a class to itself is the smaller than any other distance. 
+
+Using this analogy of classification certainty as distance, we used PCA to visualize the distances between classes. PCA accounted for only 26% of the variation in the certainties, but the distances between classes were consistent with the shapes of the images. For example, an 8 and a 3 are very similar in shape, and are very close in the PCA visualization. Similarly, a 0 and a 1 are quite different shapes, and are the most distant of the classes in the PCA graph. 
+
+These results support the notion that the MLP learns to "see" digits just like humans do, and that the training process separates the different digits spatially in its internal represenation of reality.

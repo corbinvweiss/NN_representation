@@ -91,9 +91,8 @@ def main():
     MLP = train_network(training_data)
 
     mlp_classifications = feedforward_samples(MLP, classified_samples)
-    print(mlp_classifications)
     write_results(mlp_classifications)
-    print(mean_predictions(mlp_classifications))
+    # print(mean_predictions(mlp_classifications))
 
 if __name__ == "__main__":
     main()
