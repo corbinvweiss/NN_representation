@@ -7,4 +7,6 @@
 loc.py
 src/ec2
 results.json
+fullyTrained.json
+inTraining.json
 *.png
