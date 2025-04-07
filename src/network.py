@@ -13,6 +13,7 @@ and omits many desirable features.
 # Standard library
 import random
 import time
+import json
 
 # Third-party libraries
 import numpy as np
@@ -53,22 +54,22 @@ class Network(object):
         network will be evaluated against the test data after each
         epoch, and partial progress printed out.  This is useful for
         tracking progress, but slows things down substantially."""
-        if test_data: n_test = len(test_data)
+        # if test_data: n_test = len(test_data)
         n = len(training_data)
         for j in range(epochs):
-            time1 = time.time()
+            # time1 = time.time()
             random.shuffle(training_data)
             mini_batches = [
                 training_data[k:k+mini_batch_size]
                 for k in range(0, n, mini_batch_size)]
             for mini_batch in mini_batches:
                 self.update_mini_batch(mini_batch, eta)
-            time2 = time.time()
-            if test_data:
-                print("Epoch {0}: {1} / {2}, took {3:.2f} seconds".format(
-                    j, self.evaluate(test_data), n_test, time2-time1))
-            else:
-                print("Epoch {0} complete in {1:.2f} seconds".format(j, time2-time1))
+            # time2 = time.time()
+            # if test_data:
+            #     print("Epoch {0}: {1} / {2}, took {3:.2f} seconds".format(
+            #         j, self.evaluate(test_data), n_test, time2-time1))
+            # else:
+            #     print("Epoch {0} complete in {1:.2f} seconds".format(j, time2-time1))
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
