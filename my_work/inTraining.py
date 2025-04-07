@@ -25,7 +25,7 @@ for epoch in range(len(data)):
         mean_classes_values.append(mean_certainties)
     epoch_mean_classes_values.append(mean_classes_values)
 
-# Define the distance between classes to be 1 - certainty
+# Define the distance between classes to be max(class_vals) - certainty
 epoch_distances = [[[np.amax(class_vals) - val for val in class_vals] 
                     for class_vals in epoch_mean_classes_values[epoch]] 
                     for epoch in range(len(epoch_mean_classes_values))]

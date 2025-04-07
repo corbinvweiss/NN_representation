@@ -11,4 +11,4 @@ Using this analogy of classification certainty as distance, we used PCA to visua
 These results support the notion that the MLP learns to "see" digits just like humans do, and that the training process separates the different digits spatially in its internal representation of reality.
 
 # Next Steps
-Watch how the PCA visualization of the distances between classes in the MLP changes during the training process. To do this I should add a step between epochs which runs a few test samples through the MLP, calculates distances, runs PCA, and plots the results. Ideally this would be live-updating, allowing the user to step through the training process using the arrow keys, and storing the adjacency matrices as it goes along. At any point in the training cycle I want to be able to step back through the training process using the arrow keys and watch how the PCA viz has changed. 
+Watch how the PCA visualization of the distances between classes in the MLP changes during the training process. To do this I should add a step between epochs which runs a few test samples through the MLP, calculates distances, runs PCA, and plots the results.
